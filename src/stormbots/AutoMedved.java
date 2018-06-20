@@ -187,8 +187,8 @@ public class AutoMedved {
 		moveSteeringBC(0, 100, 2.8, false); // prvni rovinka
 		moveSteeringBC(30, 100, 3.6, false); // otocit do protismeru
 		moveSteeringBC(0, 100, 1.0, false);  // druha rovinka
-		moveSteeringBC(-30, 100, 3.8, false); // otocit na cil
-		moveSteeringBC(0, 100, 1.1, false); // treti rovinka
+		moveSteeringBC(-30, 100, 3.2, false); // otocit na cil
+		moveSteeringBC(0, 100, -1.1, false); // treti rovinka
 		jedPodelZdi(4.85, irSensor, false);
 		
 		moveSteeringBC(-100, 20, 0.3, false); // otocit pred skenem
@@ -294,7 +294,7 @@ public class AutoMedved {
 			} else {
 				finishCounter = 0;
 			}
-			steering = pid.nextValue(distances[0]-WALL_DISTANCE);
+			steering = -pid.nextValue(distances[0]-WALL_DISTANCE);
 			moveSteeringBC(steering, 40, 0, true);
 			LCD.drawString("steering: " + formatter.format(steering) + "     ", 2, 2);
 			LCD.drawString("dist: "+ formatter.format(distances[0]) + "     ", 2, 4);
