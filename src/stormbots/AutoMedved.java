@@ -188,8 +188,8 @@ public class AutoMedved {
 		moveSteeringBC(30, 100, 3.6, false); // otocit do protismeru
 		moveSteeringBC(0, 100, 1.0, false);  // druha rovinka
 		moveSteeringBC(-30, 100, 3.2, false); // otocit na cil
-		moveSteeringBC(0, 100, -1.1, false); // treti rovinka
-		jedPodelZdi(4.85, irSensor, false);
+		moveSteeringBC(0, 100, 2.1, false); // treti rovinka
+		jedPodelZdi(104.85, irSensor, false);
 		
 		moveSteeringBC(-100, 20, 0.3, false); // otocit pred skenem
 	}
